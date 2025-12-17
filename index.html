@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolaji Olawale Ajibola | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--muted);
+    }
+    header a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+    h3 {
+      color: var(--accent);
+      margin-top: 3rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, opacity 0.6s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #020617;
+      color: var(--muted);
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Bolaji Olawale Ajibola</h1>
+  <p>Web Developer | Graphic Designer | Data Entry Specialist | Virtual Assistant</p>
+  <p>
+    <a href="mailto:borlarhjhi@gmail.com">borlarhjhi@gmail.com</a> |
+    <span>+234 808 053 3885</span> |
+    <a href="https://www.linkedin.com/in/raisgard" target="_blank">LinkedIn</a>
+  </p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    Creative and results-driven professional with over 5 years of experience delivering
+    high-quality websites, compelling designs, accurate data management, and reliable
+    virtual assistance. Skilled at combining technical expertise with creative problem
+    solving to help clients achieve digital and operational goals.
+  </p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <h3>Web Development</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="images/web-project-1.jpg" alt="Responsive Business Website Screenshot">
+      <div class="card-content">
+        <h4>Responsive Business Website</h4>
+        <p>Modern business website built with React and WordPress. Fully responsive, fast-loading, and optimized for user engagement.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/web-project-2.jpg" alt="E-commerce Website Screenshot">
+      <div class="card-content">
+        <h4>E-commerce Platform</h4>
+        <p>Custom e-commerce solution with clean UI, secure checkout, and performance optimizations for better conversions.</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+        <img src="images/project-placeholder.jpg" alt="Project Screenshot">
+        <div class="card-content">$1</div>
+      </div>
+  </div>
+
+  <h3 style="margin-top:2rem;">Graphic Design</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="images/design-project-1.jpg" alt="Brand Identity Design">
+      <div class="card-content">
+        <h4>Brand Identity & Logo Design</h4>
+        <p>Professional logo and branding assets designed to strengthen brand recognition across digital platforms.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/design-project-2.jpg" alt="Marketing Materials Design">
+      <div class="card-content">
+        <h4>Marketing Materials</h4>
+        <p>High-impact brochures, flyers, and social media creatives designed for multiple industries.</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+        <img src="images/project-placeholder.jpg" alt="Project Screenshot">
+        <div class="card-content">$1</div>
+      </div>
+  </div>
+
+  <h3 style="margin-top:2rem;">Data & Virtual Assistance</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="images/data-project-1.jpg" alt="Data Management Dashboard">
+      <div class="card-content">
+        <h4>Data Management & Reporting</h4>
+        <p>Organized large datasets, managed CRM systems, and created clear reports to support business decisions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/va-project-1.jpg" alt="Virtual Assistance Workflow">
+      <div class="card-content">
+        <h4>Virtual Assistance Support</h4>
+        <p>Handled email management, scheduling, document preparation, and remote administrative tasks efficiently.</p>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+        <img src="images/project-placeholder.jpg" alt="Project Screenshot">
+        <div class="card-content">$1</div>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills & Tools</h2>
+  <ul>
+    <li><strong>Web Development:</strong> React, WordPress, PHP, HTML, CSS, JavaScript</li>
+    <li><strong>Design Tools:</strong> Adobe Photoshop, Illustrator, InDesign, Canva</li>
+    <li><strong>Data & Analytics:</strong> Excel, Google Sheets, SQL, CRM Systems</li>
+    <li><strong>VA Tools:</strong> Google Workspace, Microsoft Office, Trello, Asana, Notion, Slack</li>
+    <li><strong>Soft Skills:</strong> Attention to Detail, Time Management, Professional Communication</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Testimonials</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-content">
+        <p>“Bolaji delivered an excellent website ahead of schedule. Communication was clear, and the final result exceeded expectations.”</p>
+        <strong>— Client, Small Business Owner</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <p>“Very professional and detail-oriented. The designs were clean, modern, and perfectly aligned with our brand.”</p>
+        <strong>— Marketing Manager</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <p>“Reliable virtual assistant with strong organizational skills. Tasks were handled efficiently and without supervision.”</p>
+        <strong>— Remote Client</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li>Responsive Web Design — FreeCodeCamp</li>
+    <li>Google Data Analytics Certificate</li>
+    <li>Adobe Certified Graphic Designer</li>
+    <li>Career Essentials in Generative AI</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:borlarhjhi@gmail.com">borlarhjhi@gmail.com</a></p>
+  <p>Phone: +234 808 053 3885</p>
+  <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Bolaji Olawale Ajibola. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
