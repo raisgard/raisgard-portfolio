@@ -5,111 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bolaji Olawale Ajibola | Portfolio</title>
   <style>
-    :root {
-      --bg: #0b1220;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: linear-gradient(180deg, #020617, #020617);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    header {
-      background: radial-gradient(circle at top, #0f172a, #020617);
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      color: var(--muted);
-    }
-    header a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 1rem;
-    }
-    h3 {
-      color: var(--accent);
-      margin-top: 3rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, opacity 0.6s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .cardd img {
-      width: 30%;
-      height: 500px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1.5rem;
-    }
-    .card-content a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #020617;
-      font-size: 0.9rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .card-content a:hover {
-      opacity: 0.85;
-    }
-    ul {
-      padding-left: 1.2rem;
-      color: var(--muted);
-    }
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: #020617;
-      color: var(--muted);
-    }
+:root {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #020617, #020617);
+  color: var(--text);
+  line-height: 1.7;
+}
+header {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  color: var(--muted);
+}
+header a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+}
+h3 {
+  color: var(--accent);
+  margin-top: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card, .cardd {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, opacity 0.6s ease;
+}
+.card:hover, .cardd:hover {
+  transform: translateY(-6px);
+}
+.card img, .cardd img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1.5rem;
+}
+.card-content a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #020617;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.card-content a:hover {
+  opacity: 0.85;
+}
+ul {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #020617;
+  color: var(--muted);
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 3rem 1rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card img, .cardd img {
+    height: auto;
+  }
+  .card-content a {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 2.5rem 1rem;
+  }
+  header h1 {
+    font-size: 1.7rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .card-content {
+    padding: 1rem;
+  }
+  .cardd img {
+    width: 100%;
+    height: auto;
+  }
+}
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -154,44 +192,43 @@
   <h3>Web Development</h3>
   <div class="grid">
     <div class="card">
-      <img src="images/doublegrace.png" alt="Healthcare Service Platform Website Screenshot">
+      <img src="images/doublegrace.png" alt="In-Home Assistance Portal">
       <div class="card-content">
         <h4>In-Home Assistance Portal</h4>
-        <p>A professional service-based platform built to connect families with high-quality home care solutions. The project focused on creating a compassionate and high-trust user experience (UX) to help users navigate sensitive care decisions. Key features include a detailed service breakdown, caregiver qualification transparency, and a streamlined lead-generation system for booking consultations.</p>
+        <p>A professional service-based platform built to connect families with high-quality home care solutions. Focused on UX and lead generation.</p>
         <a href="https://doublegracehomecare.com/" target="_blank">View Live Project</a>
       </div>
     </div>
     <div class="card">
-      <img src="images/Healthyliving.png" alt="Informational Website Website Screenshot">
+      <img src="images/Healthyliving.png" alt="Wellness & Nutrition Digital Platform">
       <div class="card-content">
         <h4>Wellness & Nutrition Digital Platform</h4>
-        <p>A digital platform dedicated to promoting gluten-free, nutrient-dense alternatives through the power of cassava. I designed this site to bridge the gap between complex nutritional science and everyday cooking, providing users with actionable recipes and evidence-based health benefits.</p>
+        <p>Promotes gluten-free, nutrient-dense alternatives with actionable recipes and health benefits.</p>
         <a href="https://raisgard.github.io/healthyliving/HLWCB/index.html" target="_blank">View Live Project</a>
       </div>
     </div>
     <div class="card">
-      <img src="images/appleeye2.png" alt="Healthcare Service Platform Website Screenshot">
+      <img src="images/appleeye2.png" alt="Healthcare Service Platform">
       <div class="card-content">
         <h4>Healthcare Service Platform</h4>
-        <p>A professional, trust-centered website developed for a premium home care provider. The project focused on creating a "watchful and warm" digital presence that reassures families of their loved ones' safety and well-being. I prioritized an intuitive navigation structure, making it easy for users to explore specialized care plans and caregiver credentials. The result is a clean, accessible interface that bridges the gap between high-quality medical support and compassionate companionship</p>
+        <p>A trust-centered website developed for a premium home care provider, emphasizing intuitive navigation and accessibility.</p>
         <a href="https://aehomecarevip.com/" target="_blank">View Live Project</a>
       </div>
     </div>
     <div class="card">
-      <img src="images/adiohome.png" alt="Healthcare Service Platform Website Screenshot">
+      <img src="images/adiohome.png" alt="Clinical Home Healthcare Website">
       <div class="card-content">
         <h4>Clinical Home Healthcare Website</h4>
-        <p>A comprehensive service-based website designed for a medical-grade home health agency. This project required a sophisticated, reliable aesthetic to communicate clinical expertise and professional reliability. I implemented a strategic information architecture to highlight a wide range of skilled nursing and rehabilitative services. The site is optimized for lead generation, featuring a streamlined intake process to help families and physicians quickly coordinate essential healthcare at home.</p>
+        <p>Comprehensive service-based website for a medical-grade home health agency, optimized for lead generation and user-friendly navigation.</p>
         <a href="https://adiohomehealth.com/" target="_blank">View Live Project</a>
       </div>
     </div>
-  </div>
   </div>
 
   <h3 style="margin-top:2rem;">Graphic Design</h3>
   <div class="grid">
     <div class="card">
-      <img src="images/futuristic.png" alt="Brand Identity Design">
+      <img src="images/futuristic.png" alt="Brand Identity & Logo Design">
       <div class="card-content">
         <h4>Brand Identity & Logo Design</h4>
         <p>Professional logo and branding assets designed to strengthen brand recognition across digital platforms.</p>
@@ -204,40 +241,37 @@
         <p>High-impact brochures, flyers, and social media creatives designed for multiple industries.</p>
       </div>
     </div>
-  </div>
-    <div class="cardd">
-        <img src="images/keb.jpg" alt="Project Screenshot">
-        <div class="card-content">Business Promotional Flyer</div>
+    <div class="card">
+      <img src="images/keb.jpg" alt="Business Promotional Flyer">
+      <div class="card-content">
+        <h4>Business Promotional Flyer</h4>
       </div>
-       <div class="cardd">
-        <img src="images/rainbow.png" alt="Project Screenshot">
-        <div class="card-content">Event Invitation & Promotional Flyer</div>
+    </div>
+    <div class="card">
+      <img src="images/rainbow.png" alt="Event Invitation & Promotional Flyer">
+      <div class="card-content">
+        <h4>Event Invitation & Promotional Flyer</h4>
       </div>
-      
-      
-      
+    </div>
   </div>
 
   <h3 style="margin-top:2rem;">Data & Virtual Assistance</h3>
   <div class="grid">
     <div class="card">
-      <!-- <img src="images/data-project-1.jpg" alt="Data Management Dashboard"> -->
       <div class="card-content">
         <h4>Data Management & Reporting</h4>
-        <p>I specialize in organizing complex datasets and managing Customer Relationship Management(CRM) systems to deliver clear, actionable reports that empower businesses to make data-driven decisions.</p>
+        <p>I specialize in organizing complex datasets and managing CRM systems to deliver clear, actionable reports that empower businesses to make data-driven decisions.</p>
       </div>
     </div>
     <div class="card">
-      <!-- <img src="images/va-project-1.jpg" alt="Virtual Assistance Workflow"> -->
       <div class="card-content">
         <h4>Virtual Assistance Support</h4>
         <p>I provide strategic administrative support through professional communication, precise scheduling, and workflow optimization to help businesses run efficiently and reclaim valuable time.</p>
       </div>
     </div>
   </div>
-  
-  </div>
 </section>
+
 
 <section>
   <h2>Skills & Tools</h2>
