@@ -148,6 +148,25 @@ footer {
     height: auto;
   }
 }
+/* Make all project images fully responsive */
+.card img,
+.cardd img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  .card img,
+  .cardd img {
+    width: 100%;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+  }
+}
+
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
