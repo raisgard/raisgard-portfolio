@@ -124,6 +124,55 @@ footer {
   header p { font-size: 0.9rem; }
   .card-content { padding: 1rem; }
 }
+
+/* ===== MOBILE FIXES (SAFE) ===== */
+
+/* Stack header contact info on mobile */
+@media (max-width: 768px) {
+  header p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  header p img {
+    vertical-align: middle;
+  }
+}
+
+/* Ensure all cards have padding (even without images) */
+.card > h4,
+.card > ul {
+  padding: 1.5rem;
+}
+
+/* Improve readability on very small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  .card h4 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
